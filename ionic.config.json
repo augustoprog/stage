@@ -1,0 +1,7 @@
+{
+  "name": "PE App",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

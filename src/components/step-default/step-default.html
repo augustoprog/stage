@@ -1,0 +1,18 @@
+<!-- Generated template for the StepDefaultComponent component -->
+<ul class="mb-3 step-main">
+  <li *ngFor="let item of step">
+    <span
+      [textContent]="item.active"
+      class="step"
+      [ngClass]="{
+        'step-active': item.active == active,
+        'step-disabled': active > item.active
+      }"
+    ></span>
+    <span
+      *ngIf="item.active == active"
+      [textContent]="item.text"
+      class="step-text col p-0"
+    ></span>
+  </li>
+</ul>

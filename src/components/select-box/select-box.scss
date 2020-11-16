@@ -1,0 +1,34 @@
+select-box {
+  ion-select {
+    max-width: unset;
+  }
+  ion-item {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0.875rem !important;
+    display: block !important;
+    position: static !important;
+    min-height: 0 !important;
+    .item-inner {
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+      border: none !important;
+    }
+    .input-wrapper {
+    }
+  }
+}
+
+// .select-group {
+//   border: solid 1px $color-light-gray;
+//   font-size: $font-14;
+//   font-family: $font-roboto-light;
+//   border-color: $color-light-gray;
+//   padding: $pding-default;
+//   border-radius: $round;
+//   border-right: none;
+//   padding-right: 0;
+//   ion-select {
+//     max-width: unset;
+//   }

@@ -1,0 +1,17 @@
+agendamento-selecionar-pessoa {
+  .checkbox {
+    .checkbox-icon {
+      border-color: $color-default;
+      &.checkbox-checked {
+        border-color: $color-dark-green;
+        background-color: $color-white;
+        .checkbox-inner {
+          border-color: $color-dark-green;
+        }
+      }
+    }
+  }
+  .checkbox-ios.checkbox-disabled, .checkbox-md.checkbox-disabled {
+    opacity: unset;
+  }
+}

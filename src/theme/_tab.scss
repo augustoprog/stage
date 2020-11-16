@@ -1,0 +1,42 @@
+@import "_var.scss";
+
+.new-tabs {
+  .tabbar {
+    background-image: linear-gradient(to right, #3a9eea 0%, #1d78d4 100%);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+  [class*="apps"] {
+    &:before {
+      content: "\f35c";
+    }
+  }
+  [class*="information"] {
+    &:before {
+      content: "\f149";
+    }
+  }
+  [class*="hand"] {
+    &:before {
+      content: "\f47c";
+    }
+  }
+  .tab-button {
+    min-height: 60px;
+    &[aria-selected="true"] {
+      .icon,
+      .tab-button-text {
+        color: $color-yellow;
+      }
+    }
+    .icon,
+    .tab-button-text {
+      color: white;
+    }
+    .tab-button-text {
+      font-family: $font-roboto-regular;
+      font-size: $font-12;
+      margin-top: 0 !important;
+    }
+  }
+}

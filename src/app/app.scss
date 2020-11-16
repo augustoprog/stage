@@ -1,0 +1,173 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// #2F477A // Azul escuro Facebook
+// #3B5998 // Azul Médio Facebook
+// #4E5665 // Chumbo Facebook
+// #5E5E5E // CHUMBO FONTE
+// #F6F7F8 // CINZA MAIS CLARO
+// #DCDEE3 // CINZA MÉDIO
+// #5890FF // AZUL CURTIR ATIVO
+$fa-font-path: "../assets/fonts" !default; 
+@import "font-awesome"; 
+i[class^="fa-"], ion-icon[class^="fa-"] {    
+   font-family: "FontAwesome" !important;
+}
+
+.titulo {
+  color: #4e5665;
+  background-color: #f6f7f8;
+  font-size: 100%;
+  text-align: center;
+}
+.textoLongo {
+  font-size: 100%;
+}
+
+.subtitulo {
+  color: #4e5665;
+  background-color: #f6f7f8;
+  font-size: 100%;
+  text-align: center;
+}
+.identificador {
+  color: #4e5665;
+  font-size: 100%;
+  //text-align: center;
+  font-weight: bold;
+  background-color: #f6f7f8;
+}
+
+.page-title {
+  width: 100%;
+  height: 40px;
+  //margin-top : 10px;
+  padding-top: 10px;
+  color: #4d5560;
+  //background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  //opacity:0.95;
+  //#488aff azul primario
+  //#B0C4DE cinza
+  background-color: #ebf2f8; //F2F2F2;//#9FC0AF;
+  font-size: 1.2em;
+  //font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-sub-title {
+  width: 100%;
+  height: 17px;
+  //margin-top : 10px;
+  color: #222;
+  //background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  //opacity:0.95;
+  //#488aff azul primario
+  //#B0C4DE cinza
+  background-color: #f2f2f2; //#8FBC8F;
+  font-size: 88%;
+  //font-size: 50%;
+  text-align: center;
+}
+.span-title {
+  //display: inline-block;
+  vertical-align: middle;
+  //line-height: normal;
+}
+.span-sub-title {
+  //display: inline-block;
+  vertical-align: middle;
+  //line-height: normal;
+}
+
+.page-offline {
+  width: 100%;
+  height: 30px;
+  //margin-top : 10px;
+  color: #fff;
+  //background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  //opacity:0.95;
+  //#488aff azul primario
+  //#B0C4DE cinza
+  background-color: red;
+  //font-size: 1.5em;
+  font-size: 100%;
+  text-align: center;
+}
+
+.bottom-line {
+  position: relative;
+  &::after {
+    position: absolute;
+    width: 90%;
+    content: " ";
+    height: 1px;
+    border-bottom: solid 1px white;
+    bottom: 0px;
+  }
+}
+
+.list .item-block.no-border .item-inner {
+  border: unset !important;
+}
+
+.list-ios > .item-block:last-child,
+.list-ios > .item-wrapper:last-child .item-block {
+  border: unset !important;
+}
+
+.no-border .item-inner {
+  border: unset !important;
+}
+
+.menu-button {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    background: inherit !important;
+    border: none !important;
+    padding: 0 !important;
+    font: inherit !important;
+    outline: none !important;
+    box-shadow: none !important;
+    overflow: unset !important;
+  }
+}
+
+ion-app.cameraView,
+ion-app.cameraView ion-content,
+ion-app.cameraView .nav-decor {
+  background: transparent none !important;
+}
+
+.text-upper input {
+  text-transform: uppercase !important;
+}
+
+ion-datetime .datetime-text {
+  line-height: 1.5 !important;
+  min-height: 1.5 !important;
+}
+
+ion-datetime.input-invalid button{
+  border: 1px solid #dc3545 !important;
+  border-radius: 5rem !important;
+}
+
+.action-sheet-button {
+  min-height: 2.8rem !important;
+}
+

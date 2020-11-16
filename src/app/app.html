@@ -1,0 +1,58 @@
+<ion-menu side="right" [content]="nav">
+    <ion-content class="bg-dark-blue">
+        <ion-list>
+            <ion-item class="text-right font-roboto-medium bg-dark-blue py-1 no-border">
+                <button ion-button menuToggle class="menu-button">
+                    <i class="ion-navicon font-32"></i>
+                </button>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('perfil')" *ngIf="isLogged()">
+                <ion-label class="font-20 color-white">
+                    Perfil
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('contato')" *ngIf="isLogged()">
+                <ion-label class="font-20 color-white">
+                    Contatos
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('endereco')" *ngIf="isLogged()">
+                <ion-label class="font-20 color-white">
+                    Endereços
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('documento')" *ngIf="isLogged()">
+                <ion-label class="font-20 color-white">
+                    Documentos
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('programa')" *ngIf="isLogged() && false">
+                <ion-label class="font-20 color-white">
+                    Programas Sociais
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border"
+                (click)="navTo('configuracoes')" *ngIf="isLogged() && exibeNotifica" >
+                <ion-label class="font-20 color-white">
+                    Configurações
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue bottom-line py-2 no-border" (click)="navTo('cadastro')" *ngIf="!isLogged()">
+                <ion-label class="font-20 color-white">
+                    Cadastre-se
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue py-2 no-border" (click)="navTo('sair')" *ngIf="isLogged()">
+                <ion-label class="font-20 color-white">
+                    Sair
+                </ion-label>
+            </ion-item>
+            <ion-item class="text-center font-roboto-medium bg-dark-blue py-2 no-border" (click)="navTo('logar')" *ngIf="!isLogged()">
+                <ion-label class="font-20 color-white">
+                    Logar
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #nav [root]="rootPage"></ion-nav>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "54903473666",
+    "firebase_url": "https://atipush-916ed.firebaseio.com",
+    "project_id": "atipush-916ed",
+    "storage_bucket": "atipush-916ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54903473666:android:fe0469eb73416da2d4c91b",
+        "android_client_info": {
+          "package_name": "br.gov.pe.ati.peapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54903473666-9lbb01qhdoibrj5qeqp1lutagkgvlu38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi7dFiwpqBbqXbVGodc9mPPS-AfiZxzV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54903473666-9lbb01qhdoibrj5qeqp1lutagkgvlu38.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "54903473666-ddekird7r3efouko46nd7td4rrotfhqg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.gov.pe.ati.peapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

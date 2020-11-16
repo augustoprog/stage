@@ -1,0 +1,95 @@
+@import "_var.scss";
+$pding-default: 0.8rem;
+
+.form-control {
+  font-size: $font-14;
+  font-family: $font-roboto-light;
+  border-color: $color-light-gray;
+  padding: $pding-default;
+  border-radius: $round;
+  color: $color-default;
+  &:focus {
+    box-shadow: none;
+    border-color: $color-light-gray-2;
+    & + [class*="input-group"] .input-group-text {
+      border-color: $color-light-gray-2;
+    }
+  }
+}
+ion-textarea.form-control {
+  border-radius: 15px;
+}
+.input-group {
+  .form-control {
+    border-right: none;
+    padding-right: 0;
+  }
+  .input-group-prepend,
+  .input-group-append {
+    align-items: stretch;
+  }
+}
+.input-group-text {
+  padding: $pding-default;
+  border-radius: $round;
+  border-color: $color-light-gray;
+  background-color: $color-white;
+  border-left: none;
+  font-size: $font-20;
+}
+// .input-group {
+//   input.ng-touched.ng-invalid,
+//   input.ng-touched.ng-invalid + .input-group-append .input-group-text,
+//   ion-textarea.ng-touched.ng-invalid,
+//   select-box.ng-touched.ng-invalid {
+//     border-color: $color-red;
+//   }
+// }
+
+.input-invalid {
+  border-color: $color-red;
+  &[type="checkbox"] + label {
+    &::before {
+      background-color: $color-red;
+    }
+  }
+  .checkbox-icon {
+    border-color: $color-red;
+  }
+}
+
+.label-invalid {
+  color: $color-red;
+}
+
+.custom-control-label {
+  &:before .input-group {
+    background-color: transparent;
+    border: 1px solid $color-light-gray;
+  }
+}
+.custom-checkbox {
+  input[type="checkbox"],
+  input[type="radio"] {
+    left: 0;
+    top: 6px;
+  }
+}
+
+.button {
+  padding: $pding-default;
+  height: 42px;
+  border-radius: $round;
+  .button-inner {
+    text-transform: uppercase;
+    font-size: $font-14;
+    font-family: $font-roboto-medium;
+  }
+}
+
+@media (min-width: 321px) {
+  .content-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}

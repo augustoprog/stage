@@ -1,0 +1,88 @@
+@import "_var.scss";
+.custom-alert {
+  .alert-wrapper {
+    border-radius: 13px;
+  }
+  .alert-sub-title {
+    margin: 0;
+  }
+  .alert-ico {
+    margin-bottom: 0.5rem;
+    display: flex;
+  }
+  .alert-title {
+    color: $color-default;
+    font-family: $font-roboto-medium;
+    font-size: $font-18;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+  }
+  .alert-msg {
+    display: block;
+    color: $color-default;
+    font-family: $font-roboto-light;
+    font-size: $font-13;
+    text-align: center;
+  }
+  .alert-msg-3 {
+    display: block;
+    color: $color-default;
+    font-family: $font-roboto-light;
+    font-size: $font-13;
+    text-align: left;
+  }
+  .alert-msg-2 {
+    color: $color-default;
+    font-family: $font-roboto-medium;
+    font-size: $font-13;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+  }
+  .alert-button-group {
+    padding: 0.5rem 1rem;
+    flex-wrap: initial;
+    justify-content: center;
+    .alert-button {
+      border-radius: $round;
+      border: 1px solid $color-blue;
+      color: $color-blue;
+      font-size: $font-14;
+      font-family: $font-roboto-medium;
+      min-width: initial;
+      height: 44px;
+      flex: 1 1 auto;
+      .button-inner {
+        text-align: center;
+        justify-content: center;
+      }
+      &.activated {
+        background-color: rgb(241, 241, 241);
+      }
+      &:first-child {
+        background-color: $color-blue;
+        color: white;
+        margin-right: 0.2rem;
+      }
+      &:last-child {
+        margin-left: 0.2rem;
+        margin-right: 0;
+      }
+    }
+  }
+  .id-card {
+    height: 25px;
+    width: 35px;
+  }
+  &.custom-alert-big {
+    .alert-message,
+    .alert-head {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    .alert-wrapper {
+      max-width: 90vw;
+    }
+  }
+}

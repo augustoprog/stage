@@ -1,0 +1,177 @@
+<!--
+  Generated template for the AgendamentoDadosRequerenteInputComponent component
+-->
+<form
+  #form="ngForm"
+  novalidate
+  (submit)="stepTwoSubmit($event, form)"
+  class="pt-3 mt-3"
+>
+  <h3 class="font-roboto-regular font-14 text-left mb-3 color-default">
+    Preencha o formulário abaixo
+  </h3>
+  <div class="mb-2">
+    <input
+      type="text"
+      [(ngModel)]="usuario.nome"
+      name="nome"
+      class="form-control"
+      placeholder="Nome Completo"
+      autocomplete="off"
+      required
+      [readonly]="readonly"
+      #nomeModel="ngModel"
+      [class.input-invalid]="nomeModel.invalid && form.submitted"
+    />
+  </div>
+
+  <div class="mb-2">
+    <input
+      type="tel"
+      cpf
+      [(ngModel)]="usuario.cpf"
+      [required]="isContatoObrigatorio('CPF')"
+      name="cpf"
+      #cpfModel="ngModel"
+      class="form-control"
+      placeholder="CPF"
+      autocomplete="off"
+      [readonly]="readonly"
+      [textMask]="{ mask: mask }"
+      [class.input-invalid]="
+        (form.submitted || cpfModel.touched) && cpfModel.invalid
+      "
+    />
+  </div>
+  <div class="mb-2 p-relative">
+    <input
+      *ngIf="readonly"
+      type="text"
+      [value]="formatDate(usuario.dataNascimento)"
+      required
+      name="dataNascimento"
+      class="form-control"
+      placeholder="Data de Nascimento"
+      autocomplete="off"
+      readonly
+    />
+    <ion-datetime
+      *ngIf="!readonly"
+      required
+      [class.input-invalid]="isInvalidModel(form, dateModel)"
+      #dateModel="ngModel"
+      class="form-control"
+      placeholder="Data de Nascimento"
+      displayFormat="DD/MM/YYYY"
+      [(ngModel)]="usuario.dataNascimento"
+      name="dataNascimento"
+      monthNames="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+      monthShortNames="Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez"
+      dayNames="Domingo, Segunda-feira, Ter\u00e7a-feira, Quarta-feira, Quinta-feira, Sexta-feira, Sabado"
+      dayShortNames="Dom, Seg, Ter, Qua, Qui, Sex, Sab"
+      doneText="OK"
+      cancelText="Cancelar"
+    ></ion-datetime>
+  </div>
+
+  <div class="mb-2">
+    <input
+      type="email"
+      [(ngModel)]="usuario.email"
+      name="email"
+      class="form-control"
+      placeholder="E-mail"
+      autocomplete="off"
+      [required]="isContatoObrigatorio('EMAIL')"
+      #emailModel="ngModel"
+      [class.input-invalid]="emailModel.invalid && form.submitted"
+    />
+  </div>
+
+  <div class="mb-2">
+    <ion-input
+      type="tel"
+      [(ngModel)]="usuario.celular"
+      name="celular"
+      class="form-control p-0"
+      placeholder="Celular"
+      autocomplete="off"
+      [required]="isContatoObrigatorio('CELULAR')"
+      #celularModel="ngModel"
+      [pattern]="patternTel"
+      [brmasker]="{ mask: '(00) 00000-0000', len: 15 }"
+      [class.input-invalid]="celularModel.invalid && form.submitted"
+    ></ion-input>
+  </div>
+
+  <div class="mb-2">
+    <ion-input
+      type="tel"
+      [(ngModel)]="usuario.telefoneFixo"
+      name="telefoneFixo"
+      class="form-control p-0"
+      placeholder="Telefone Fixo"
+      autocomplete="off"
+      [required]="isContatoObrigatorio('TELEFONE')"
+      #telefoneFixoModel="ngModel"
+      [pattern]="patternFone"
+      [brmasker]="{ mask: '(00) 0000-0000', len: 14 }"
+      [class.input-invalid]="telefoneFixoModel.invalid && form.submitted"
+    ></ion-input>
+  </div>
+  <!-- 
+   -->
+  <div>
+    <div class="mb-3 mt-3 d-flex align-items-start justify-content-start">
+      <div class="d-flex align-items-center">
+        <!-- <input
+          type="checkbox"
+          name="lembrete"
+          [(ngModel)]="usuario.lembrete"
+          #lembreteModel="ngModel"
+          class="custom-control-input"
+          id="lembrete"
+          [class.input-invalid]="
+            (form.submitted || lembreteModel.touched) && lembreteModel.invalid
+          "
+        /> -->
+
+        <ion-checkbox
+          [(ngModel)]="usuario.lembrete"
+          name="lembrete"
+          #lembreteModel="ngModel"
+          id="lembrete"
+          [class.input-invalid]="
+            (form.submitted || lembreteModel.touched) && lembreteModel.invalid
+          "
+        ></ion-checkbox>
+        <label
+          (click)="usuario.lembrete = !usuario.lembrete"
+          class="ml-2 mb-0 font-13 color-default font-roboto-bold"
+          for="lembrete"
+          >Lembrete por email</label
+        >
+      </div>
+    </div>
+    <!-- end politica -->
+  </div>
+  <!-- end informacao add -->
+
+  <div class="d-flex align-items-center">
+    <a
+      href="javascript:;"
+      (click)="voltar()"
+      class="mr-1 text-uppercase disable-hover button button-md button-default button-default-md button-block button-block-md button-md-primary"
+    >
+      <span class="button-inner">Voltar</span>
+    </a>
+    <button
+      type="submit"
+      class="text-uppercase ml-1 disable-hover button button-md button-default button-default-md button-block button-block-md button-md-primary"
+    >
+      <span class="button-inner">AVANÇAR</span>
+    </button>
+  </div>
+  <!-- end div -->
+</form>
+<!-- end form -->

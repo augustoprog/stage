@@ -1,0 +1,11 @@
+<div class="d-flex p-relative">
+    <ion-item>
+        <ion-label *ngIf="selectedValue == null || selectedValue == ''" class="font-14 font-roboto-regular m-0" style="color: #858e96"
+            [textContent]="placeholder || 'Tipo'"></ion-label>
+        <ion-select class="form-group m-0 p-0 pr-1 color-default" style="flex:1" [disabled]="disabled || false"
+            [interface]="interface || 'action-sheet'" name="select-box" (ionChange)="updateModel($event)" [(ngModel)]="selectedValue"
+            cancelText="Cancelar">
+            <ion-option *ngFor="let option of selectOptions" [value]="getOptionValue(option) " [textContent]="getOptionDisplayValue(option)"></ion-option>
+        </ion-select>
+    </ion-item>
+</div>

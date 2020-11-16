@@ -1,0 +1,18 @@
+<div class="p-2 box-requisito">
+
+  <div *ngIf="informacoes">
+    <h3 class="font-roboto-black font-16 color-blue mb-2 pt-2 text-center">    
+      Informações Adicionais
+    </h3>
+    <p class="font-14 line-height-default pre-line" [innerHTML]="informacoes"></p>
+  </div>
+  <!-- end info add -->
+
+  <div *ngIf="requisitos">
+    <h3 class="font-roboto-black font-16 color-blue mb-2 pt-2">    
+      O que é Necessário
+    </h3>
+    <p class="font-14 line-height-default pre-line" [innerHTML]="requisitos"></p>
+  </div>
+  <!-- end requisitos -->
+</div>

@@ -1,0 +1,42 @@
+@import "_var.scss";
+
+.searchbar-custom {
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 0.2rem;
+  &.custom-blue {
+    background-color: $color-light-blue-2;
+    border-bottom: 1px solid white;
+  }
+  .searchbar-ios {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .searchbar-md {
+    padding: 0;
+  }
+  .searchbar-input {
+    font-size: $font-14;
+    font-family: $font-roboto-light;
+    padding: 0.8rem 2rem;
+    border-radius: $round;
+    border: 1px solid $color-light-gray;
+    line-height: 1;
+    box-shadow: none;
+    height: auto;
+  }
+  .searchbar-search-icon {
+    right: 7px;
+    left: initial;
+  }
+  .searchbar-ios {
+    .searchbar-search-icon {
+      top: 17px;
+      right: 10px;
+    }
+  }
+  .searchbar-has-value .searchbar-search-icon {
+    display: none !important;
+  }
+}

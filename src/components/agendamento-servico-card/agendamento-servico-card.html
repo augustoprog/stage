@@ -1,0 +1,69 @@
+<div class="d-flex my-2">
+  <div class="d-flex align-items-center bg-light-gray round-5 p-2 flex-1">
+    <div class="font-roboto-medium font-15 font-flex color-default">
+      <span
+        class="font-roboto-bold"
+        [textContent]="
+          agendamento?.horarioAgenda?.servicoUnidade?.servico?.nome
+        "
+      ></span>
+    </div>
+  </div>
+</div>
+<!-- edn div -->
+
+<div class="d-flex mb-2">
+  <div class="col-6 p-0 line-height-default">
+    <span class="font-roboto-bold color-default font-15 d-block">Data:</span>
+    <span
+      class="font-roboto-regular color-default text d-block"
+      [textContent]="formatDate(agendamento?.horarioAgenda?.horario)"
+    >
+    </span>
+  </div>
+  <div class="col-6 p-0 line-height-default">
+    <span class="font-roboto-bold color-default font-15 d-block">Hora:</span>
+    <span
+      class="font-roboto-regular color-default text d-block"
+      [textContent]="formatHour(agendamento?.horarioAgenda?.horario)"
+    >
+    </span>
+  </div>
+</div>
+
+<div class="line-height-default mb-2">
+  <span class="font-roboto-bold color-default font-15 d-block">Unidade:</span>
+  <span
+    class="font-roboto-regular color-default text d-block"
+    [textContent]="
+      agendamento?.horarioAgenda?.servicoUnidade?.unidadeAtendimento?.nome
+    "
+  ></span>
+</div>
+<!-- end row -->
+
+<div class="line-height-default mb-2">
+  <span class="font-roboto-bold color-default font-15 d-block">Endereço:</span>
+  <span
+    class="font-roboto-regular color-default text d-block"
+    [textContent]="
+      formatEndereco(
+        agendamento?.horarioAgenda?.servicoUnidade?.unidadeAtendimento?.endereco
+      )
+    "
+  ></span>
+</div>
+<!-- end row -->
+
+<div class="mb-2 line-height-default">
+  <span class="font-roboto-bold color-default font-15 d-block">CEP:</span>
+  <span
+    class="font-roboto-regular color-default text d-block"
+    [textContent]="
+      agendamento?.horarioAgenda?.servicoUnidade?.unidadeAtendimento?.endereco
+        ?.cep
+    "
+  >
+  </span>
+</div>
+<!-- end row -->

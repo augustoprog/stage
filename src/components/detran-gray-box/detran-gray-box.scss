@@ -1,0 +1,20 @@
+detran-gray-box {
+  .gray-box {
+    background-color: #e8e8e8;
+    border-radius: 5px;
+  }
+
+  @media screen and (device-aspect-ratio: 40/71) {
+    .font-14 {
+      font-size: 0.75rem !important;
+    }
+
+    .font-20 {
+      font-size: 0.75rem !important;
+    }
+
+    .font-22 {
+      font-size: 0.875rem !important;
+    }
+  }
+}

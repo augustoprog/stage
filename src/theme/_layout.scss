@@ -1,0 +1,19 @@
+@import "_var.scss";
+.content {
+  background: #fff url("../assets/images/background-app2.png") no-repeat right
+    bottom;
+  background-size: 68%;
+  .main {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  .content-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .content-logo {
+    margin: 0 auto 2rem;
+    width: 35%;
+  }
+}

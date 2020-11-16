@@ -1,0 +1,61 @@
+.step-main {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .step {
+      width: 28px;
+      height: 28px;
+      border-radius: $round;
+      border: 2px solid $color-blue;
+      color: $color-blue;
+      background-color: $color-white;
+      font-family: $font-roboto-bold;
+      font-size: $font-14;
+      text-align: center;
+      line-height: $font-24;
+      margin-right: 0.2rem;
+      @media screen and (device-aspect-ratio: 40/71) {
+        width: 24px;
+        height: 24px;
+        font-size: $font-12;
+        line-height: $font-22;
+        margin-right: 0.1rem;
+      }
+
+      @media screen and (device-aspect-ratio: 9/16) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .step-text {
+      color: $color-default;
+      font-size: $font-12;
+      font-family: $font-roboto-bold;
+      line-height: $font-15;
+      @media screen and (device-aspect-ratio: 40/71) {
+        font-size: $font-10;
+        line-height: 0.8rem;
+      }
+    }
+    .step-active {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+    &:last-child {
+      .step:not(.step-active) {
+        margin-right: 0;
+      }
+    }
+    .step-disabled {
+      background-color: #dedede;
+      color: $color-light-gray-4;
+      border-color: $color-dark-gray;
+    }
+  }
+}

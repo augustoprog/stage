@@ -1,0 +1,122 @@
+@import "_var.scss";
+
+.custom-segment {
+  line-height: 1.12rem;
+  .segment-header {
+    line-height: 1.12rem;
+    .segment-button {
+      border-radius: 0 !important;
+      font-size: $font-13;
+      font-family: $font-roboto-regular;
+      height: 3rem;
+      line-height: 3rem;
+      border: 1px solid $color-white;
+      border-top: none;
+      border-bottom: none;
+      background-color: $color-light-gray;
+      color: $color-default;
+      text-transform: capitalize;
+      opacity: 1;
+      &.segment-activated {
+        background-color: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+  .segment-content {
+    line-height: 1.12rem;
+    background-color: $color-blue;
+    border: 1px solid $color-white;
+    color: $color-white;
+    padding-top: 16px;
+    & * {
+      line-height: 1.12rem;
+    }
+    .card {
+      background: transparent;
+      border: none;
+      box-shadow: none !important;
+    }
+    .item-segmento {
+      .card-header {
+        font-size: $font-13;
+        color: $color-white;
+        padding-bottom: 0;
+        font-family: $font-roboto-bold;
+        border: none;
+        background: transparent;
+        padding-top: 0;
+        border-bottom: 1px solid white;
+      }
+      .card-content {
+        padding: 0;
+      }
+      .badge {
+        padding: 0.2em 0.8em;
+      }
+      .locaiton {
+        height: 42px;
+        width: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
+        & + span {
+          margin-top: -5px;
+        }
+      }
+      .button {
+        border-color: #fff !important;
+        color: #fff;
+      }
+    }
+  }
+  .schedule-segmento {
+    .grid {
+      padding: 0;
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .col {
+        padding: 0;
+      }
+      .schedule-header {
+        .col {
+          border-top-left-radius: 0.4rem;
+          border-top-right-radius: 0.4rem;
+          font-family: $font-roboto-bold;
+          color: $color-default;
+          border-bottom: 1px solid #e5e5e5;
+          font-size: $font-12;
+          margin-right: 0.5rem;
+          background-color: #fff;
+          padding-top: 0.2rem;
+          text-align: center;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .schedule-content {
+        .col {
+          border-bottom-left-radius: 0.4rem;
+          border-bottom-right-radius: 0.4rem;
+          background-color: #fff;
+          font-size: $font-11;
+          margin-right: 0.5rem;
+          color: $color-light-gray-4;
+          text-align: center;
+          padding-bottom: 0.2rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
